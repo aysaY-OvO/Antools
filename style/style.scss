@@ -132,23 +132,12 @@ body {
       }
 
       .form-control {
+        border-radius: 15px;
         z-index: 0.1;
         border: none;
         background: #283036;
         color: rgba(255, 255, 255, 0.55);
         outline: none;
-      }
-
-      .btn {
-        z-index: 5;
-        border: none;
-        border-radius: 8px;
-        background: #ff6e30;
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        color: #ffffff;
       }
     }
 
@@ -370,6 +359,150 @@ body {
     }
   }
 
+  .contributor {
+    .contributor__body {
+      margin: 250px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .contributor__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .contributor__subtitle {
+          width: 427px;
+        }
+      }
+      .input-group {
+        margin: 60px 0;
+        border: none;
+        width: 549px;
+        height: 64px;
+  
+        .input-group-text {
+          border: none;
+          background: #283036;
+        }
+  
+        .form-control {
+          border-radius: 15px;
+          z-index: 0.1;
+          border: none;
+          background: #283036;
+          color: rgba(255, 255, 255, 0.55);
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer__body {
+      width: 100%;
+      margin: 100px auto;
+      margin-top: 240px;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.15);
+      .footer__content {
+        margin: 70px auto;
+        width: 87%;
+        display: flex;
+        justify-content: space-between;
+        .footer__title {
+          font-family: 'Poppins', sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 30px;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        .footer__antools {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 183px;
+          width: 260px;
+          .footer__logo {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .footer__cr {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .footer__description {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+            color: rgba(255, 255, 255, 0.55);
+          }
+        }
+        .footer__contacts {
+          width: 197px;
+          height: 142px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .footer__subtitle {
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.55);
+          }
+        }
+        .footer__categories {
+          width: 112px;
+          height: 108px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.55);
+          }
+        }
+        .footer__info {
+          width: 144px;
+          height: 142px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(255, 255, 255, 0.55);
+          }
+        }
+      }
+    }
+  }
+
   .title-header {
     display: flex;
   }
@@ -442,6 +575,18 @@ body {
     }
   }  
 
+  .btn {
+    z-index: 5;
+    border: none;
+    border-radius: 15px;
+    background: #ff6e30;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
   .like {
     color: rgba(255, 255, 255, 0.38);
   }
@@ -491,6 +636,7 @@ body {
   .form-control:focus {
     box-shadow: none;
     outline: -webkit-focus-ring-color auto 0px;
+    z-index: 0.1;
   }
 
   a {

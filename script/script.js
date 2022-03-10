@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     width = window.getComputedStyle(slidesWrapper).width,
     prev = document.querySelector('.slider__prev-arrow'),
     next = document.querySelector('.slider__next-arrow'),
-    slidesCounters = document.querySelectorAll('.slider__count');
+    slidesCounter = document.querySelectorAll('.slider__count');
 
   //Card
   cardsParent.forEach((parent) => {
@@ -65,6 +65,12 @@ window.addEventListener('DOMContentLoaded', () => {
     slide.style.width = width;
   });
 
+  function currentSlide() {
+    slidesCounter[slideIndex - 1].removeAttribute('src');
+    slidesCounter[slideIndex - 1].setAttribute('src', '/icons/slider/active-slider-counter.png');
+  }
+  currentSlide();
+
   next.addEventListener('click', () => {
     if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
       offset = 0;
@@ -78,6 +84,15 @@ window.addEventListener('DOMContentLoaded', () => {
       slideIndex = 1;
     } else {
       slideIndex++;
+    }
+
+    if (slidesCounter[slideIndex - 1]) {
+      slidesCounter.forEach(count => {
+        count.removeAttribute('src');
+        count.setAttribute('src', '/icons/slider/slider-counter.png');
+      });
+      slidesCounter[slideIndex - 1].removeAttribute('src');
+      slidesCounter[slideIndex - 1].setAttribute('src', '/icons/slider/active-slider-counter.png');
     }
   });
 
@@ -94,6 +109,15 @@ window.addEventListener('DOMContentLoaded', () => {
       slideIndex = slides.length;
     } else {
       slideIndex--;
+    }
+    
+    if (slidesCounter[slideIndex - 1]) {
+      slidesCounter.forEach(count => {
+        count.removeAttribute('src');
+        count.setAttribute('src', '/icons/slider/slider-counter.png');
+      });
+      slidesCounter[slideIndex - 1].removeAttribute('src');
+      slidesCounter[slideIndex - 1].setAttribute('src', '/icons/slider/active-slider-counter.png');
     }
   });
 });
